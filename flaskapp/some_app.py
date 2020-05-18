@@ -80,9 +80,9 @@ def net():
         for elem in decode:
             neurodic[elem[0][1]] = elem[0][2]
             # сохраняем загруженный файл
-            form.upload.data.save(filename)
-            # передаем форму в шаблон, так же передаем имя файла и результат работы нейронной
-            # сети если был нажат сабмит, либо передадим falsy значения
+        form.upload.data.save(filename)
+        # передаем форму в шаблон, так же передаем имя файла и результат работы нейронной
+        # сети если был нажат сабмит, либо передадим falsy значения
     return render_template('net.html',form=form,image_name=filename,neurodic=neurodic)
 
 from flask import request
