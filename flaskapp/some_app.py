@@ -20,7 +20,7 @@ def data_to():
     #передаем данные в шаблон и вызываем его
     return render_template('templates/simple.html',some_str = some_str,
                             some_value = some_value,some_pars=some_pars)
-
+import lxml.etree as ET
 @app.route("/apixml",methods=['GET', 'POST'])
 def apixml():
     #парсим xml файл в dom
