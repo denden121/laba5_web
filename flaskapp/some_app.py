@@ -21,6 +21,20 @@ def data_to():
     return render_template('templates/simple.html',some_str = some_str,
                             some_value = some_value,some_pars=some_pars)
 
+@app.route("/apixml",methods=['GET', 'POST'])
+def apixml():
+    #парсим xml файл в dom
+    dom = ET.parse("./static/xml/file.xml")
+    #парсим шаблон в dom
+    xslt = ET.parse("./static/xml/file.xslt")
+    #получаем трансформер
+    transform = ET.XSLT(xslt)
+    #преобразуем xml с помощью трансформера xslt
+    newhtml = transform(dom)
+    #преобразуем из памяти dom в строку, возможно, понадобится указать кодировку
+    strfile = ET.tostring(newhtml)
+    return strfile
+
 
 # модули работы с формами и полями в формах
 from flask_wtf import FlaskForm,RecaptchaField
