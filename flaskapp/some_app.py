@@ -110,8 +110,8 @@ def apinet():
         decode = neuronet.getresult([img])
         neurodic = {}
         for elem in decode:
-        neurodic[elem[0][1]] = str(elem[0][2])
-        print(elem)
+            neurodic[elem[0][1]] = str(elem[0][2])
+            print(elem)
         # пример сохранения переданного файла
         # handle = open('./static/f.png','wb')
         # handle.write(cfile)
