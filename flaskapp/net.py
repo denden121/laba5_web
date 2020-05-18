@@ -34,8 +34,8 @@ ncol=3
 # загружаем и создаем стандартную уже обученную сеть keras
 visible2 = Input(shape=(nh,nw,ncol),name = 'imginp')
 resnet = keras.applications.resnet_v2.ResNet50V2(include_top=True,
-weights='imagenet', input_tensor=visible2,
-input_shape=None, pooling=None, classes=1000)
+                                                 weights='imagenet', input_tensor=visible2,
+                                                 input_shape=None, pooling=None, classes=1000)
 
 
 # чтение изображений из каталога
