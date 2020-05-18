@@ -30,8 +30,8 @@ from wtforms.validators import DataRequired
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 # используем капчу и полученные секретные ключи с сайта google
 app.config['RECAPTCHA_USE_SSL'] = False
-app.config['RECAPTCHA_PUBLIC_KEY'] = 'сюда поместить ключ из google'
-app.config['RECAPTCHA_PRIVATE_KEY'] = 'сюда поместить секретный ключ из google'
+app.config['RECAPTCHA_PUBLIC_KEY'] = '6LdjFfkUAAAAAEA67rEntDqyCzBPFjYpLZfiuwm8'
+app.config['RECAPTCHA_PRIVATE_KEY'] = '6LdjFfkUAAAAABzhxxXvuPFWQO2dnQjYyGUp7cKL'
 app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
 # создаем форму для загрузки файла
 
