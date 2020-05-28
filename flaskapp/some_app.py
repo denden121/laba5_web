@@ -1,6 +1,9 @@
 print("Hello world")
 from flask import Flask
 from flask import render_template
+from flask_bootstrap import Bootstrap
+
+bootstrap = Bootstrap(app)
 
 app = Flask(__name__)
 #декоратор для вывода страницы по умолчанию
