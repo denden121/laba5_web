@@ -3,12 +3,12 @@ from flask import Flask
 from flask import render_template
 from flask_bootstrap import Bootstrap
 
-bootstrap = Bootstrap(app)
+
 
 app = Flask(__name__)
 #декоратор для вывода страницы по умолчанию
 
-
+bootstrap = Bootstrap(app)
 @app.route("/")
 def hello():
     return " <html><head></head> <body> Hello World! </body></html>"
