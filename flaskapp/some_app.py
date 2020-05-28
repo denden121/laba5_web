@@ -40,7 +40,8 @@ def apixml():
 
 
 # модули работы с формами и полями в формах
-from flask_wtf import FlaskForm,RecaptchaField,CSRFProtect, CSRFError
+from flask_wtf.csrf import CSRFProtect, CSRFError
+from flask_wtf import FlaskForm,RecaptchaField
 from wtforms import StringField, SubmitField, TextAreaField
 # модули валидации полей формы
 from wtforms.validators import DataRequired
