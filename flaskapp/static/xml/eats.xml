@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="eats.xslt" ?>
+<eats>
+    <eat id= "1">
+    <name>Hagia Sophia</name>
+    <cost>Turkey</cost>
+    <calorie>Istanbul</calorie>
+  </eat>
+    <eat id = "2">
+    <name>The Eiffel tower</name>
+    <cost>France</cost>
+    <calorie>Paris</calorie>
+  </eat>
+    <eat id = "3">
+    <name>The Colosseum</name>
+    <cost>Italy</cost>
+    <calorie>Rome</calorie>
+  </eat>
+    <eat id = "4">
+    <name>Leaning tower of Pisa</name>
+    <cost>Italy</cost>
+    <calorie>Pisa</calorie>
+  </eat>
+    <eat id = "5">
+    <name>Taj Mahal</name>
+    <cost>India</cost>
+    <calorie>Agra</calorie>
+  </eat>
+</eats>    
