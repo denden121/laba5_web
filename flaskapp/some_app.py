@@ -148,7 +148,7 @@ def apinet():
     return resp
 
 @app.route("/food",methods=['GET','POST'])
-def buildings():
+def food():
     dom = ET.parse("./static/xml/food.xml")
     type = request.args.get('type')
     if type == 'list':
