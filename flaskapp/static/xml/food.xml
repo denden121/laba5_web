@@ -3,27 +3,22 @@
 <food>
     <dish id= "1">
     <name>Борщ</name>
-    <cost>100 рублей</cost>
-    <calorie>1000 каллорий</calorie>
+    <cost>100 rub</cost>
+    <calorie>1000 cal</calorie>
   </dish>
     <dish id = "2">
     <name>Пельмени</name>
-    <cost>150 рублей</cost>
-    <calorie>100500 каллорий</calorie>
+    <cost>150 rub</cost>
+    <calorie>100500 cal</calorie>
   </dish>
     <dish id = "3">
     <name>Шаурма</name>
-    <cost>200 рублей</cost>
-    <calorie>3242 каллорий</calorie>
+    <cost>200 rub</cost>
+    <calorie>3242 cal</calorie>
   </dish>
     <dish id = "4">
     <name>Гречка</name>
-    <cost>30 рублей</cost>
-    <calorie>4564 каллорий</calorie>
-  </dish>
-    <dish id = "5">
-    <name>Taj Mahal</name>
-    <cost>India</cost>
-    <calorie>Agra</calorie>
+    <cost>30 rub</cost>
+    <calorie>4564 cal</calorie>
   </dish>
 </food>    
