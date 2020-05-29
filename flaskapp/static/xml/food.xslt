@@ -8,7 +8,7 @@
     <body>
         <table border = "1">
     <tbody>
-    <xsl:for-each select="Food/building">
+    <xsl:for-each select="food/dish">
         <tr>
             <th>
         <xsl:value-of select="@id"/>
