@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entegral</title>
+</head>
+<body>
+
+    {% if result %}
+        <p>Result {{ message }}</p>
+    {% else %}
+        <form action="" method="post">
+            <p>
+                <label for="func">Function</label>
+                <input type="text" name="func">
+            </p>
+            <p>
+                <label for="a">Start</label>
+                <input type="text" name="a">
+            </p>
+            <p>
+                <label for="b">Finish</label>
+                <input type="text" name="b">
+            </p>
+            <p>
+                <label for="step">Step</label>
+                <input type="text" name="step">
+            </p>
+            <p>
+                <input type="submit">
+            </p>
+        </form>
+    {% endif %}
+</body>
+</html>
