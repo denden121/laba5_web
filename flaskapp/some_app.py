@@ -178,7 +178,7 @@ def integral():
         result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
     return f" <html><head></head> <body>Result = {result}</body></html>"
 
-@app.route("/integral_model",methods=['POST'])
+@app.route("/integral_model",methods=['POST','GET'])
 def integral_model():
 #     dom = ET.parse("./static/xml/food.xml")
     result = None
