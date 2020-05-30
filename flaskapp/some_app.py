@@ -162,7 +162,7 @@ def food():
     newhtml = transform(dom)
     strfile = ET.tostring(newhtml)
     return strfile
-
+import math
 @app.route("/integral",methods=['GET'])
 def integral():
 #     dom = ET.parse("./static/xml/food.xml")
