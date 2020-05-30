@@ -171,11 +171,11 @@ def integral():
     b = request.args.get('b')
     step = request.args.get('step')
     if func == 'sin':
-        result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step)
+        result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
     elif func == 'cos':
-        result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step)
+        result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step
     elif func == 'tan':
-        result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step)
+        result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
     return f" <html><head></head> <body>Result = {result}</body></html>"
 
 #     if type == 'list':
