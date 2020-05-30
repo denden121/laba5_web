@@ -163,6 +163,34 @@ def food():
     strfile = ET.tostring(newhtml)
     return strfile
 
+@app.route("/integral",methods=['GET'])
+def integral():
+#     dom = ET.parse("./static/xml/food.xml")
+    func = request.args.get('func')
+    a = request.args.get('a')
+    b = request.args.get('b')
+    step = request.args.get('step')
+    if func == 'sin':
+        result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step)
+    elif func == 'cos':
+        result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step)
+    elif func == 'tan':
+        result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step)
+    return f" <html><head></head> <body>Result = {result}</body></html>"
+
+#     if type == 'list':
+#         xslt = ET.parse("./static/xml/food_list.xslt")
+#     elif type == 'table':
+#         xslt = ET.parse("./static/xml/food.xslt")
+#     else:
+#         resp = Response(status=500)
+#         return resp
+#     transform = ET.XSLT(xslt)
+#     newhtml = transform(dom)
+#     strfile = ET.tostring(newhtml)
+#     return strfile
+
+
 if __name__ == "__main__":
     app.run(host='127.0.0.1',port=5000)
 
