@@ -193,7 +193,7 @@ def integral_model():
             result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step
         elif func == 'tan':
             result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
-    return render_template('./model.html', result=result)
+    return render_template('./templates/model.html', result=result)
 #     if type == 'list':
 #         xslt = ET.parse("./static/xml/food_list.xslt")
 #     elif type == 'table':
