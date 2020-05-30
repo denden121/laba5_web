@@ -182,16 +182,17 @@ def integral():
 def integral_model():
 #     dom = ET.parse("./static/xml/food.xml")
     result = None
-    func = request.args.get('func')
-    a = int(request.form.get('a'))
-    b = int(request.form.get('b'))
-    step = int(request.form.get('step'))
-    if func == 'sin':
-        result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
-    elif func == 'cos':
-        result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step
-    elif func == 'tan':
-        result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
+    if request.method == 'POST':
+        func = request.args.get('func')
+        a = int(request.form.get('a'))
+        b = int(request.form.get('b'))
+        step = int(request.form.get('step'))
+        if func == 'sin':
+            result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
+        elif func == 'cos':
+            result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step
+        elif func == 'tan':
+            result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
     return render_template('model.html', result=result)
 #     if type == 'list':
 #         xslt = ET.parse("./static/xml/food_list.xslt")
