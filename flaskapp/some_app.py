@@ -167,9 +167,9 @@ import math
 def integral():
 #     dom = ET.parse("./static/xml/food.xml")
     func = request.args.get('func')
-    a = request.args.get('a')
-    b = request.args.get('b')
-    step = request.args.get('step')
+    a = int(request.args.get('a'))
+    b = int(request.args.get('b'))
+    step = int(request.args.get('step'))
     if func == 'sin':
         result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
     elif func == 'cos':
