@@ -9,7 +9,7 @@
     {% if result %}
         <p>Result {{ result }}</p>
     {% else %}
-        <form action="" method="post">
+        <form action="/integral_model" method="post">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
             <p>
                 <label for="func">Function</label>
