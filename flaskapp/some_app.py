@@ -181,7 +181,7 @@ def integral():
 @app.route("/integral_model",methods=['POST','GET'])
 def integral_model():
 #     dom = ET.parse("./static/xml/food.xml")
-    result = None
+    result = false
     if request.method == 'POST':
         func = request.args.get('func')
         a = int(request.form.get('a'))
