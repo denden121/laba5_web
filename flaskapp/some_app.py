@@ -169,7 +169,7 @@ def integral():
     func = request.args.get('func')
     a = int(request.args.get('a'))
     b = int(request.args.get('b'))
-    step = int(request.args.get('step'))
+    step = float(request.args.get('step'))
     if func == 'sin':
         result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
     elif func == 'cos':
