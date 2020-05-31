@@ -189,7 +189,7 @@ def integral_model():
         print(func)
         a = float(request.form.get('a'))
         b = float(request.form.get('b'))
-        step = int(request.form.get('step'))
+        step = float(request.form.get('step'))
         print(a,b,step)
         if func == 'sin':
             result = sum(math.sin(i)*math.sin(i+step) for i in numpy.arange(a, b - step, step))/step
