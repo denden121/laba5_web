@@ -162,20 +162,22 @@ def food():
     newhtml = transform(dom)
     strfile = ET.tostring(newhtml)
     return strfile
+
+import numpy 
 import math
 @app.route("/integral",methods=['GET'])
 def integral():
 #     dom = ET.parse("./static/xml/food.xml")
     func = request.args.get('func')
-    a = int(request.args.get('a'))
-    b = int(request.args.get('b'))
+    a = float(request.args.get('a'))
+    b = float(request.args.get('b'))
     step = float(request.args.get('step'))
     if func == 'sin':
-        result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
+        result = sum(math.sin(i)*math.sin(i+step) for i in numpy.arange(a, b - step, step))/step
     elif func == 'cos':
-        result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step
+        result = sum(math.cos(i)*math.cos(i+step) for i in numpy.arange(a, b - step, step))/step
     elif func == 'tan':
-        result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
+        result = sum(math.tan(i)*math.tan(i+step) for i in numpy.arange(a, b - step, step))/step
     return f" <html><head></head> <body>Result = {result}</body></html>"
 
 @app.route("/integral_model",methods=['POST','GET'])
@@ -185,16 +187,16 @@ def integral_model():
     if request.method == 'POST':
         func = request.args.get('func')
         print(func)
-        a = int(request.form.get('a'))
-        b = int(request.form.get('b'))
+        a = float(request.form.get('a'))
+        b = float(request.form.get('b'))
         step = int(request.form.get('step'))
         print(a,b,step)
         if func == 'sin':
-            result = sum(math.sin(i)*math.sin(i+step) for i in range(a, b - step, step))/step
+            result = sum(math.sin(i)*math.sin(i+step) for i in numpy.arange(a, b - step, step))/step
         elif func == 'cos':
-            result = sum(math.cos(i)*math.cos(i+step) for i in range(a, b - step, step))/step
+            result = sum(math.cos(i)*math.cos(i+step) for i in numpy.arange(a, b - step, step))/step
         elif func == 'tan':
-            result = sum(math.tan(i)*math.tan(i+step) for i in range(a, b - step, step))/step
+            result = sum(math.tan(i)*math.tan(i+step) for i in numpy.arange(a, b - step, step))/step
         print(result)
     return render_template('model.html', result=result)
 #     if type == 'list':
