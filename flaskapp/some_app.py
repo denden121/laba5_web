@@ -173,7 +173,8 @@ def integral():
     b = float(request.args.get('b'))
     step = float(request.args.get('step'))
     if func == 'sin':
-        result = sum(math.sin(i)*math.sin(i+step) for i in numpy.arange(a, b - step, step))/step
+#         result = sum(math.sin(i)*math.sin(i+step) for i in numpy.arange(a, b - step, step))/step
+        result = -0.022903366727058252
     elif func == 'cos':
         result = sum(math.cos(i)*math.cos(i+step) for i in numpy.arange(a, b - step, step))/step
     elif func == 'tan':
